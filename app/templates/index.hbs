@@ -2,17 +2,19 @@
 
 <p>We hope you find exactly what you're looking for in a place to stay.</p>
 
+{{filter-listing filteredList=filteredList autoComplete=(action 'autoComplete') search=(action 'search')}}
+
 {{#each model as |rentalUnit|}}
   {{rental-listing rental=rentalUnit}}
 {{/each}}
 
-{{#each model as |rental|}}
+{{!-- {{#each model as |rental|}}
   <h2>{{rental.title}}</h2>
   <p>Owner: {{rental.owner}}</p>
   <p>Type: {{rental.type}}</p>
   <p>Location: {{rental.city}}</p>
   <p>Number of bedrooms: {{rental.bedrooms}}</p>
-{{/each}}
+{{/each}} --}}
 
 {{#link-to 'about'}}About{{/link-to}}
 Click here to {{#link-to 'contact'}}Contact us{{/link-to}}.
