@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
     autoComplete(param) {
       if(param !== "") {
         this.store.query('rental', {city: param}).then((result) => {
-          this.set('filteredList', result);
+          this.set('filteredList',result);
         });
       } else {
         this.set('filteredList').clear();
@@ -14,8 +14,8 @@ export default Ember.Controller.extend({
     },
     search(param) {
       if(param !== "") {
-        this.store.query('rental', {city: param}).then((rental) => {
-          this.set('model', result);
+        this.store.query('rental', {city: param}).then((result) => {
+          this.set('model',result);
         });
       } else {
         this.set('model').clear();
