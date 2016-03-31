@@ -6,11 +6,10 @@ const communityPropertyTypes = [
   'Apartment'
 ];
 
-export function rentalPropertyType([type]/*, hash*/) {
-  if (communityPropertyTypes.contains(tyoe)) {
+export function rentalPropertyType([type]) {
+  if (communityPropertyTypes.contains(type)) {
     return 'Community';
   }
-
   return 'Standalone';
 }
 
